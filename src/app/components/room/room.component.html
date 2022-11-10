@@ -1,0 +1,50 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+      <div class="container-fluid">
+          <div class="row">
+
+              <div class="col-md-3" *ngFor="let r of rooms">
+                  <div class="room-box">
+                      <a href="room-detail.html" >
+                          <img *ngFor="let image of r.images" src= {{image.imageUrl}} class="img-responsive">
+                      </a>
+                      <a href="room-detail.html">
+                          <h1>{{r.name}}</h1>
+                      </a>
+                      <h4>{{r.description}} </h4>
+                      <h4>Capacity: {{r.capacity}} </h4>
+                      <div class="price">{{r.price}} $</div>
+                      <a href="#" class="primary-btn">Add to cart</a>
+                  </div>
+              </div>
+              
+
+          </div>
+
+          <div class="footer-pagination">
+              <div class="row">
+                  <div class="col-md-6"></div>
+                  <div class="col-md-3">
+                      <div class="items">
+                          <label>Item per page</label> <select>
+                              <option>10</option>
+                              <option selected>5</option>
+                              <option>15</option>
+                              <option>20</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="number">1 - 5 of 20</div>
+                  </div>
+                  <div class="col-md-1">
+                      <div class="arrows">
+                          <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                          <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
